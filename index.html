@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>3D Tilt Card</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="mobile-warning">This demo works on mobile devices only 📱</div>
-
-  <div class="card-container">
-    <div class="card">
-      <h1>📱 3D Motion Card</h1>
-      <p>Move your phone to see the magic ✨</p>
+  <div class="game-container">
+    <h1 class="title">Tic Tac Toe</h1>
+    <div class="score">
+      <div class="score-item">
+        <span class="player">X</span>
+        <span class="score-value" id="x-score">0</span>
+      </div>
+      <div class="score-item">
+        <span class="player">O</span>
+        <span class="score-value" id="o-score">0</span>
+      </div>
     </div>
+    <div class="board" id="board">
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    <div class="message" id="message"></div>
+    <button class="reset-btn" id="reset-btn">Reset Game</button>
   </div>
 
-  <script src="script.js" type="module"></script>
+  <script src="script.js"></script>
 </body>
 </html>
