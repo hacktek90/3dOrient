@@ -2,19 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>3D Tilt Card</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Tic Tac Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="mobile-warning">This demo works on mobile devices only 📱</div>
+  <div class="glow-layer"></div>
+  <main class="game-shell">
+    <header class="game-header">
+      <div class="title-group">
+        <span class="badge">Arcade Mode</span>
+        <h1>Tic Tac Toe</h1>
+        <p>Race to outsmart your opponent in this neon showdown.</p>
+      </div>
+      <div class="scoreboard">
+        <div class="score-card player-x">
+          <span class="label">Player X</span>
+          <span class="score" data-score="x">0</span>
+        </div>
+        <div class="score-card draws">
+          <span class="label">Draws</span>
+          <span class="score" data-score="draws">0</span>
+        </div>
+        <div class="score-card player-o">
+          <span class="label">Player O</span>
+          <span class="score" data-score="o">0</span>
+        </div>
+      </div>
+    </header>
 
-  <div class="card-container">
-    <div class="card">
-      <h1>📱 3D Motion Card</h1>
-      <p>Move your phone to see the magic ✨</p>
-    </div>
-  </div>
+    <section class="game-area">
+      <div class="status-bar">
+        <span class="status-pill" data-status>Player X — make your move</span>
+        <button class="ghost-btn" type="button" data-action="new-round">Reset Board</button>
+      </div>
+
+      <div class="board" role="grid" aria-label="Tic Tac Toe board">
+        <button class="cell" data-cell aria-label="Row 1 column 1"></button>
+        <button class="cell" data-cell aria-label="Row 1 column 2"></button>
+        <button class="cell" data-cell aria-label="Row 1 column 3"></button>
+        <button class="cell" data-cell aria-label="Row 2 column 1"></button>
+        <button class="cell" data-cell aria-label="Row 2 column 2"></button>
+        <button class="cell" data-cell aria-label="Row 2 column 3"></button>
+        <button class="cell" data-cell aria-label="Row 3 column 1"></button>
+        <button class="cell" data-cell aria-label="Row 3 column 2"></button>
+        <button class="cell" data-cell aria-label="Row 3 column 3"></button>
+      </div>
+    </section>
+
+    <footer class="control-bar">
+      <div class="round-counter">Round <span data-round>1</span></div>
+      <div class="buttons">
+        <button class="primary-btn" type="button" data-action="new-game">Start New Match</button>
+      </div>
+    </footer>
+  </main>
 
   <script src="script.js" type="module"></script>
 </body>
